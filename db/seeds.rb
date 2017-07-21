@@ -3,9 +3,9 @@
 end
 
 
-lauren = User.create!(username: "lauren", first_name: "Lauren", last_name: "Armbrüst")
-alex = User.create!(username: "alex", first_name: "Alex", last_name: "Okamoto")
-jack = User.create!(username: "jack", first_name: "Jack", last_name: "Ass")
+lauren = User.create!(username: "lauren", first_name: "Lauren", last_name: "Armbrüst", email:"l@l.com", password:"password", password_confirmation:"password")
+alex = User.create!(username: "alex", first_name: "Alex", last_name: "Okamoto", email:"a@a.com", password:"password", password_confirmation:"password")
+jack = User.create!(username: "jack", first_name: "Jack", last_name: "Ass", email:"j@j.com", password:"password", password_confirmation:"password")
 
 alex.friend_request(lauren)
 lauren.accept_request(alex)
