@@ -38,6 +38,56 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+
+  # REQUEST FRIEND
+  def friend_request
+    @user = current_user
+    friend = User.find(params[:friend_id])
+
+    if @user.friend_request(friend)
+      render json: friend
+    elsif @user.friend_request(friend) == nil
+      render json: 'Already friends'
+    end
+  end
+
+  # ACCEPT FRIEND
+  def accept_request
+    @user = current_user
+    friend = User.find(params[:friend_id])
+
+    if @user.accept_request(friend)
+      render json: friend
+    elsif @user.accept_request(friend) == nil
+      render json: 'Invalid request'
+    end
+  end
+
+  # DECLINE FRIEND
+  def decline_request
+    @user = current_user
+    friend = User.find(params[:friend_id])
+
+    if @user.decline_request(friend)
+      render json: @user
+    elsif @user.decline_request(friend) == nil
+      render json: 'Invalid request'
+    end
+  end
+
+  # REMOVE FRIEND
+  def remove_friend
+    @user = current_user
+    friend = User.find(params[:friend_id])
+
+    if @user.remove_friend(friend)
+      render json: @user
+    elsif @user.remove_friend(friend) == nil
+      render json: 'Invalid request'
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -46,6 +96,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :firstname, :lastname)
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :image, :github_id, :facebook_id, :google_id, :instagram_id)
     end
 end
