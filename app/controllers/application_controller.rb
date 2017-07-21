@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::API
   before_action :authenticate_user!
 
- def authenticate_user!
-   render json: { errors: ["Unauthorized"] }, status: 401 unless user_signed_in?
- end
+  def authenticate_user!
+    render json: { errors: ["Unauthorized"] }, status: 401 unless user_signed_in?
+  end
 
- def user_signed_in?
-   !!current_user
- end
+  def user_signed_in?
+    !!current_user
+  end
 
   def current_user
     @current_user ||= User.find(decoded_token[:id]) if id_found?
