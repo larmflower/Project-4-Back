@@ -4,8 +4,8 @@ class OauthController < ApplicationController
   def github
     token = HTTParty.post('https://github.com/login/oauth/access_token', {
       query: {
-        client_id: ENV["GITHUB_P4_CLIENT_ID"],
-        client_secret: ENV["GITHUB_P4_CLIENT_SECRET"],
+        client_id: ENV["GITHUB_CLIENT_ID_MAKE_NEWS"],
+        client_secret: ENV["GITHUB_CLIENT_SECRET_MAKE_NEWS"],
         code: params[:code]
       },
       headers: { 'Accept' => 'application/json' }
