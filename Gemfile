@@ -30,7 +30,7 @@ gem 'active_model_serializers'
 gem 'has_friendship'
 
 
-gem 'omniauth-google-oauth2' #added by lauren 
+#gem 'omniauth-google-oauth2' #added by lauren 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
