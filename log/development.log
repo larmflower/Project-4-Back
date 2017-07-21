@@ -604,3 +604,522 @@ Processing by UsersController#index as */*
 Completed 200 OK in 77ms (Views: 67.1ms | ActiveRecord: 12.6ms)
 
 
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 11:50:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.87ms)
+Completed 200 OK in 88ms (Views: 58.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:05:20 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.59ms)
+Completed 200 OK in 42ms (Views: 27.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:06:19 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.43ms)
+Completed 200 OK in 34ms (Views: 25.5ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:06:32 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.7ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.7ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.25ms)
+Completed 200 OK in 45ms (Views: 33.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:06:45 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.15ms)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:06:51 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.49ms)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:21:22 +0100
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:21:22 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.04ms)
+Completed 200 OK in 34ms (Views: 26.3ms | ActiveRecord: 6.9ms)
+
+
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (5.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.56ms)
+Completed 200 OK in 79ms (Views: 57.7ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:21:39 +0100
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:21:39 +0100
+Processing by PostsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPost Load (13.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.0ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.16ms)
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+Completed 200 OK in 49ms (Views: 24.5ms | ActiveRecord: 24.3ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.56ms)
+Completed 200 OK in 70ms (Views: 33.4ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:21:46 +0100
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:21:46 +0100
+Processing by PostsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.04ms)
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+Completed 200 OK in 47ms (Views: 27.5ms | ActiveRecord: 19.0ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.9ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.68ms)
+Completed 200 OK in 62ms (Views: 32.5ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:21:54 +0100
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:21:54 +0100
+Processing by PostsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mPost Load (9.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (10.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (26.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (16.7ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (91.6ms)
+Completed 200 OK in 104ms (Views: 33.5ms | ActiveRecord: 70.3ms)
+
+
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (103.09ms)
+Completed 200 OK in 116ms (Views: 49.0ms | ActiveRecord: 66.4ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:22:24 +0100
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:22:24 +0100
+Processing by PostsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (3.0ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.14ms)
+Completed 200 OK in 48ms (Views: 27.6ms | ActiveRecord: 20.0ms)
+
+
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (3.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (58.21ms)
+Completed 200 OK in 62ms (Views: 28.8ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:24:26 +0100
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:24:26 +0100
+Processing by UsersController#index as HTML
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (1.7ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (3.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.9ms)
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+Completed 200 OK in 39ms (Views: 24.1ms | ActiveRecord: 14.2ms)
+
+
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.9ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.63ms)
+Completed 200 OK in 49ms (Views: 32.0ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:24:45 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:24:45 +0100
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (3.8ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.0ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.61ms)
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+Completed 200 OK in 43ms (Views: 29.1ms | ActiveRecord: 13.6ms)
+
+
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (72.94ms)
+Completed 200 OK in 75ms (Views: 36.5ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:25:38 +0100
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-21 12:25:38 +0100
+Processing by UsersController#index as HTML
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPost Load (7.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.25ms)
+Completed 200 OK in 48ms (Views: 28.6ms | ActiveRecord: 18.6ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (4.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.88ms)
+Completed 200 OK in 65ms (Views: 36.4ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:25:45 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.46ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:25:48 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.45ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:25:52 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.53ms)
+Completed 200 OK in 46ms (Views: 35.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:27:06 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.31ms)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:27:38 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.97ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:27:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (1.8ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.81ms)
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:28:22 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.9ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.3ms)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:28:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.41ms)
+Completed 200 OK in 25ms (Views: 18.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:28:39 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (1.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.12ms)
+Completed 200 OK in 53ms (Views: 33.1ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:28:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.01ms)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:02 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.18ms)
+Completed 200 OK in 38ms (Views: 23.2ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:10 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.62ms)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.81ms)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (3.0ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (2.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.09ms)
+Completed 200 OK in 53ms (Views: 33.5ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.11ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-21 12:29:56 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 1], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 2], ["friendable_type", "User"]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mHasFriendship::Friendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2[0m  [["friendable_id", 3], ["friendable_type", "User"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.72ms)
+Completed 200 OK in 39ms (Views: 21.9ms | ActiveRecord: 15.9ms)
+
+
