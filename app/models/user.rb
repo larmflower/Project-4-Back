@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password validations: false
+  mount_uploader :image, ImageUploader
   has_friendship
   has_many :posts
   has_many :comments
@@ -9,9 +10,9 @@ class User < ApplicationRecord
 
   def oauth_login?
     github_id.present?
-    facebook_id.present?
-    instagram_id.present?
-    google_id.present?
+    # facebook_id.present?
+    # instagram_id.present?
+    # google_id.present?
   end
 
 end
