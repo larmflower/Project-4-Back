@@ -26,7 +26,6 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'fog-aws'
 
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -16,9 +16,9 @@ jack = User.create!(username: 'jack', first_name: 'Jack', last_name: 'Ass', emai
 # alex.accept_request(jack)
 
 posts = Post.create!([
-  {headline: 'AAAAAAA', src: 'bbc-news', categories: 'Politics', description: 'This is bomb.', user: lauren},
-  {headline: 'Woot Woot', src: 'buzzfeed', categories: 'Pop Culture', description: 'I can\'t believe it.', user: alex},
-  {headline: 'Cash me out', src: 'daily-mail', categories: 'Pop Culture', description: 'Damn.', user: jack}
+  {headline: 'AAAAAAA', src: 'bbc-news', categories: 'Politics', description: 'This is bomb.', user: lauren, remote_image_url: 'http://i.imgur.com/lnoEfGy.jpg'},
+  {headline: 'Woot Woot', src: 'buzzfeed', categories: 'Pop Culture', description: 'I can\'t believe it.', user: alex, remote_image_url: 'http://i.imgur.com/lnoEfGy.jpg'},
+  {headline: 'Cash me out', src: 'daily-mail', categories: 'Pop Culture', description: 'Damn.', user: jack, remote_image_url: 'http://i.imgur.com/lnoEfGy.jpg'}
   ])
 
 Comment.create!([
