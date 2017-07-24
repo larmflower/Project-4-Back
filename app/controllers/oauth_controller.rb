@@ -8,25 +8,28 @@ class OauthController < ApplicationController
         client_secret: ENV["GITHUB_CLIENT_SECRET_MAKE_NEWS"],
         code: params[:code]
       },
-      headers: { 'Accept' => 'application/json' }
+      headers: { 'Accept' => 'application/json'}
     }).parsed_response
 
-profile = HTTParty.get('https://api.github.com/user', {
-  query: token,
-  headers: { 'User-Agent' => 'HTTParty', 'Accept' => 'application/json' }
-}).parsed_response
+    profile = HTTParty.get('https://api.github.com/user', {
+      query: token,
+      headers: { 'User-Agent' => 'HTTParty', 'Accept' => 'application/json' }
+    }).parsed_response
 
-  user = User.where("email = :email OR github_id = :github_id", email: profile["email"], github_id: profile["id"]).first
-  user = User.new username: profile["login"], email: profile["email"] unless user
-  user[:github_id] = profile["id"]
+    p profile
 
-  if user.save
-    token = Auth.issue({ id: user.id })
-    render json: { user: UserSerializer.new(user), token: token }, status: :ok
+    user = User.where("github_id = :github_id OR email = :email", email: profile["email"], github_id: profile["id"]).first
+    user = User.new username: profile["login"], email: [profile["email"]] unless user
+    user[:github_id] = profile["id"]
 
+    p user
 
-  else
-    render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
-  end
+    if user.save
+      token = Auth.issue({ id: user.id })
+      render json: { user: UserSerializer.new(user), token: token }, status: :ok
+    else
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+    end
+
   end
 end

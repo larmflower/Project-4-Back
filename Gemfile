@@ -21,6 +21,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'httparty'
 
+
+gem 'carrierwave'
+gem 'carrierwave-base64'
+gem 'fog-aws'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -29,9 +34,12 @@ gem 'rack-cors'
 gem 'active_model_serializers'
 gem 'has_friendship'
 
+<<<<<<< HEAD
 
 #gem 'omniauth-google-oauth2' #added by lauren 
 
+=======
+>>>>>>> development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -8,7 +8,7 @@ one:
   password: MyString
   password_confirmation: MyString
   image: MyString
-  github_id: MyString
+  github_id: 1
   facebook_id: MyString
   google_id: MyString
   instagram_id: MyString
@@ -21,7 +21,7 @@ two:
   password: MyString
   password_confirmation: MyString
   image: MyString
-  github_id: MyString
+  github_id: 1
   facebook_id: MyString
   google_id: MyString
   instagram_id: MyString

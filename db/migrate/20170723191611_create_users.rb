@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :password
       t.string :password_confirmation
       t.string :image
-      t.string :github_id
+      t.integer :github_id
       t.string :facebook_id
       t.string :google_id
       t.string :instagram_id
