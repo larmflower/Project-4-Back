@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20170723192311) do
     t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "blocker_id"
     t.integer  "status"
   end
 

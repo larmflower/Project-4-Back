@@ -28,7 +28,8 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
-    if @post.update(post_params)
+    return render json: { errors: ["Unauthorized"] } if @post.user != current_user
+    if @post.update(Uploader.upload(post_params))
       render json: @post
     else
       render json: @post.errors, status: :unprocessable_entity
@@ -37,6 +38,7 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
+    return render json: { errors: ["Unauthorized"] } if @post.user != current_user
     @post.destroy
   end
 
