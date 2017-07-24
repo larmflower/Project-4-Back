@@ -14808,3 +14808,264 @@ Processing by UsersController#index as HTML
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.72ms)
 Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 3.0ms)
 >>>>>>> development
+Started GET "/api/news?news=bbc-news" for 127.0.0.1 at 2017-07-24 13:51:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (13.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.4) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.4) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/news?news=bbc-news" for 127.0.0.1 at 2017-07-24 13:55:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.4) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.4) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1347200930821886805);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170723191611)
+  [1m[35m (18.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (55.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "email" character varying, "password" character varying, "password_confirmation" character varying, "image" character varying, "github_id" integer, "facebook_id" character varying, "google_id" character varying, "instagram_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1347200930821886805)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (216.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "final_project_api_development"[0m
+  [1m[35m (200.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "final_project_api_test"[0m
+  [1m[35m (520.6ms)[0m  [1m[35mCREATE DATABASE "final_project_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (416.7ms)[0m  [1m[35mCREATE DATABASE "final_project_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1347200930821886805);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170723191611)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "email" character varying, "password" character varying, "password_confirmation" character varying, "image" character varying, "github_id" integer, "facebook_id" character varying, "google_id" character varying, "instagram_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723191611"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20170723191821)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "headline" character varying, "src" character varying, "categories" character varying, "image" character varying, "description" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723191821"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20170723191834)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" serial primary key, "body" text, "post_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_post_id" ON "comments"  ("post_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723191834"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFriendships (20170723191917)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateFriendships < ActiveRecord::Migration[4.2] (called from require at /Users/laurenarmbrust/development/project-4-setup/final_project_api/bin/rails:9)
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "friendships" ("id" serial primary key, "friendable_type" character varying, "friendable_id" integer, "friend_id" integer, "status" character varying, "created_at" timestamp, "updated_at" timestamp)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723191917"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBlockerIdToFriendships (20170723191918)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddBlockerIdToFriendships < ActiveRecord::Migration[4.2] (called from require at /Users/laurenarmbrust/development/project-4-setup/final_project_api/bin/rails:9)
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "friendships" ADD "blocker_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723191918"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to UpdateFriendships (20170723192024)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class UpdateFriendships < ActiveRecord::Migration[4.2] (called from require at /Users/laurenarmbrust/development/project-4-setup/final_project_api/bin/rails:9)
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "friendships" ADD "status_temp" integer[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[33mUPDATE "friendships" SET "status_temp" = 0 WHERE "friendships"."status" = $1[0m  [["status", 0]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "friendships" SET "status_temp" = 1 WHERE "friendships"."status" = $1[0m  [["status", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "friendships" SET "status_temp" = 2 WHERE "friendships"."status" = $1[0m  [["status", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "friendships" SET "status_temp" = 3 WHERE "friendships"."status" = $1[0m  [["status", 3]]
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "friendships" DROP "status"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "friendships" RENAME COLUMN "status_temp" TO "status"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723192024"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPasswordDigestToUsers (20170723192311)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170723192311"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (20.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-24 12:56:38.868390"], ["updated_at", "2017-07-24 12:56:38.868390"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1347200930821886805)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (38.8ms)[0m  [1m[35mTRUNCATE users RESTART IDENTITY CASCADE[0m
+  [1m[35m (14.4ms)[0m  [1m[35mTRUNCATE posts RESTART IDENTITY CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mTRUNCATE comments RESTART IDENTITY CASCADE[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "l@l.com"], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "image", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Lauren"], ["last_name", "Armbrüst"], ["username", "lauren"], ["email", "l@l.com"], ["image", "2vVpzeh.jpg"], ["created_at", "2017-07-24 12:56:39.307485"], ["updated_at", "2017-07-24 12:56:39.307485"], ["password_digest", "$2a$10$doA/nweS8gLVVeRUf8vTDujKpPE.nuR.RrrJGhbf78x0RUUdC/d/6"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "image", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alex"], ["last_name", "Okamoto"], ["username", "alex"], ["email", "a@a.com"], ["image", "5WiYKuf.jpg"], ["created_at", "2017-07-24 12:56:39.714856"], ["updated_at", "2017-07-24 12:56:39.714856"], ["password_digest", "$2a$10$44C9uJdj/LA3G34Y/1uR3eqnGTg9PdtrPxTn4kGC7cS4JU0e3C9n."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "j@j.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "image", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jack"], ["last_name", "Ass"], ["username", "jack"], ["email", "j@j.com"], ["image", "lnoEfGy.jpg"], ["created_at", "2017-07-24 12:56:40.030073"], ["updated_at", "2017-07-24 12:56:40.030073"], ["password_digest", "$2a$10$Od9opVvoTWfg8AgI7AUdhOKTT0v30x3Y6xfDSd1ANT3Iz3FT6ckkm"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.3ms)[0m  [1m[32mINSERT INTO "posts" ("headline", "src", "categories", "image", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["headline", "AAAAAAA"], ["src", "bbc-news"], ["categories", "Politics"], ["image", "lnoEfGy.jpg"], ["description", "This is bomb."], ["user_id", 1], ["created_at", "2017-07-24 12:56:40.252907"], ["updated_at", "2017-07-24 12:56:40.252907"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("headline", "src", "categories", "image", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["headline", "Woot Woot"], ["src", "buzzfeed"], ["categories", "Pop Culture"], ["image", "lnoEfGy.jpg"], ["description", "I can't believe it."], ["user_id", 2], ["created_at", "2017-07-24 12:56:40.481229"], ["updated_at", "2017-07-24 12:56:40.481229"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("headline", "src", "categories", "image", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["headline", "Cash me out"], ["src", "daily-mail"], ["categories", "Pop Culture"], ["image", "lnoEfGy.jpg"], ["description", "Damn."], ["user_id", 3], ["created_at", "2017-07-24 12:56:40.710004"], ["updated_at", "2017-07-24 12:56:40.710004"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "what's dis"], ["post_id", 1], ["user_id", 2], ["created_at", "2017-07-24 12:56:40.937220"], ["updated_at", "2017-07-24 12:56:40.937220"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "cool"], ["post_id", 3], ["user_id", 1], ["created_at", "2017-07-24 12:56:40.952287"], ["updated_at", "2017-07-24 12:56:40.952287"]]
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "hello"], ["post_id", 2], ["user_id", 3], ["created_at", "2017-07-24 12:56:40.970252"], ["updated_at", "2017-07-24 12:56:40.970252"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/news?news=bbc-news" for 127.0.0.1 at 2017-07-24 13:56:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NewsapiController#news as HTML
+  Parameters: {"news"=>"bbc-news"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.33ms)
+Completed 200 OK in 498ms (Views: 52.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-24 14:01:05 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.81ms)
+Completed 200 OK in 76ms (Views: 57.7ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2017-07-24 14:01:11 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/api/posts" for 127.0.0.1 at 2017-07-24 14:01:11 +0100
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.84ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 3.2ms)
+
+
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 1], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 2], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."friendable_id" = $1 AND "friendships"."friendable_type" = $2 AND "friendships"."status" = $3[0m  [["friendable_id", 3], ["friendable_type", "User"], ["status", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.09ms)
+Completed 200 OK in 54ms (Views: 39.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/news?news=bbc-news" for 127.0.0.1 at 2017-07-24 14:10:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NewsapiController#news as HTML
+  Parameters: {"news"=>"bbc-news"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.14ms)
+Completed 200 OK in 585ms (Views: 79.3ms | ActiveRecord: 6.6ms)
+
+
