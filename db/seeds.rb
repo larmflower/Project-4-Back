@@ -9,7 +9,7 @@ alex = User.create!(username: 'alex', first_name: 'Alex', last_name: 'Okamoto', 
 jack = User.create!(username: 'jack', first_name: 'Jack', last_name: 'Ass', email: 'j@j.com', password: 'password', password_confirmation: 'password', remote_image_url: 'http://i.imgur.com/lnoEfGy.jpg')
 
 #friendships
-# 
+#
 # alex.friend_request(lauren)
 # lauren.accept_request(alex)
 #
