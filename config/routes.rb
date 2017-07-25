@@ -11,9 +11,5 @@ Rails.application.routes.draw do
     put 'declinefriend', to: 'users#decline_request'
     put 'removefriend', to: 'users#remove_friend'
     get 'news', to: 'newsapi#news'
-    # post 'requestfriend', to: 'users#friend_request'
-    # put 'acceptfriend', to: 'users#accept_request'
-    # put 'declinefriend', to: 'users#decline_request'
-    # put 'removefriend', to: 'users#remove_friend'
   end
 end

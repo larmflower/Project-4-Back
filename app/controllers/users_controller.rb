@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
+    if @user.update(Uploader.upload(user_params))
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -97,6 +97,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :image, :github_id, :facebook_id, :google_id, :instagram_id, :base64)
+      params.permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :image, :github_id, :facebook_id, :google_id, :instagram_id, :base64)
     end
 end
