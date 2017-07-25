@@ -58,7 +58,7 @@ def accept_request
 
   if @user.accept_request(friend)
     render json: friend
-  elsif @user.accept_request(friend) == nil
+  elsif @user.accept_request(friend) === nil
     render json: 'Invalid request'
   end
 end

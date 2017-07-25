@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true, unless: :oauth_login?
-  validates :password, presence: true, confirmation: true, unless: :oauth_login?
+  validates :password, presence: true, confirmation: true, unless: :oauth_login?, on: :create
 
   def oauth_login?
     github_id.present? || facebook_id.present? || instagram_id.present?
