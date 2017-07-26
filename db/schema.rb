@@ -51,15 +51,13 @@ ActiveRecord::Schema.define(version: 20170723192311) do
     t.string   "last_name"
     t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.string   "password_confirmation"
     t.string   "image"
     t.integer  "github_id"
     t.string   "facebook_id"
     t.string   "google_id"
     t.string   "instagram_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "password_digest"
   end
 

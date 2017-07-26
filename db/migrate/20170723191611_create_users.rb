@@ -5,8 +5,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :last_name
       t.string :username
       t.string :email
-      t.string :password
-      t.string :password_confirmation
       t.string :image
       t.integer :github_id
       t.string :facebook_id
