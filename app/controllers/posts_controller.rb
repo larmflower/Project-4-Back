@@ -27,7 +27,6 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
-    return render json: { errors: ["Unauthorized"] } if @post.user != current_user
     if @post.update(Uploader.upload(post_params))
       render json: @post
     else
@@ -49,6 +48,6 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.permit(:headline, :src, :categories, :image, :description, :user_id, :base64, :remote_image_url)
+      params.permit(:headline, :src, :categories, :image, :description, :user_id, :base64, :remote_image_url, posts_liked_ids: [])
     end
 end

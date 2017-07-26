@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_secure_password validations: false
   mount_uploader :image, ImageUploader
   has_friendship
-  # has_and_belongs_to_many :posts_liked, class_name: 'Post', join_table: 'posts_users'
+  has_and_belongs_to_many :posts_liked, class_name: 'Post', join_table: 'posts_users'
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 

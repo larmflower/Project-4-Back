@@ -2,6 +2,8 @@
   ActiveRecord::Base.connection.execute("TRUNCATE #{model.table_name} RESTART IDENTITY CASCADE")
 end
 
+import 'friends_request'
+
 #users
 
 lauren = User.create!(username: 'lauren', first_name: 'Lauren', last_name: 'Armbrüst', email: 'l@l.com', password: 'password', password_confirmation: 'password', remote_image_url: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/18892945_10210015707974582_5706180472066943476_n.jpg?oh=bc35db39a46cb126c092e895127363a2&oe=5A01AB7F')
@@ -14,36 +16,36 @@ anderson =  User.create!(username: 'anderson', first_name: 'Anderson', last_name
 abraham =  User.create!(username: 'abraham', first_name: 'Abraham', last_name: 'Lincoln', email: 'ab@ab.com', password: 'password', password_confirmation: 'password', remote_image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/220px-Abraham_Lincoln_O-77_matte_collodion_print.jpg')
 
 #friendships
-
-alex.friend_request(lauren)
-lauren.accept_request(alex)
-
-jack.friend_request(lauren)
-lauren.accept_request(jack)
-
-jack.friend_request(alex)
-alex.accept_request(jack)
-
-abraham.friend_request(mark)
-mark.accept_request(abraham)
-
-wolf.friend_request(lauren)
-lauren.accept_request(wolf)
-
-alex.friend_request(anderson)
-anderson.accept_request(alex)
-
-jack.friend_request(jane)
-jane.accept_request(jack)
-
-jack.friend_request(anderson)
-anderson.decline_request(jack)
-
-lauren.friend_request(wolf)
-
-abraham.friend_request(lauren)
-
-abraham.friend_request(alex)
+# 
+# alex.friend_request(lauren)
+# lauren.accept_request(alex)
+#
+# jack.friend_request(lauren)
+# lauren.accept_request(jack)
+#
+# jack.friend_request(alex)
+# alex.accept_request(jack)
+#
+# abraham.friend_request(mark)
+# mark.accept_request(abraham)
+#
+# wolf.friend_request(lauren)
+# lauren.accept_request(wolf)
+#
+# alex.friend_request(anderson)
+# anderson.accept_request(alex)
+#
+# jack.friend_request(jane)
+# jane.accept_request(jack)
+#
+# jack.friend_request(anderson)
+# anderson.decline_request(jack)
+#
+# lauren.friend_request(wolf)
+#
+# abraham.friend_request(lauren)
+#
+# abraham.friend_request(alex)
 
 #posts
 
