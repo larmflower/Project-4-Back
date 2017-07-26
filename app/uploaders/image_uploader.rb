@@ -14,6 +14,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     nil
   end
 
+  def default_url
+    images = ['http://i.imgur.com/k1X0fet.jpg', 'http://i.imgur.com/TNUvhh2.jpg', 'http://i.imgur.com/QQp66qT.png', 'http://i.imgur.com/NHxJP6Y.jpg']
+    url = images.sample
+    return url
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
