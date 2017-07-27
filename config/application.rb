@@ -31,7 +31,7 @@ module FinalProjectApi
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins ['localhost:7000', 'https://damp-anchorage-82919.herokuapp.com']
+      origins ['localhost:7000', 'https://make-news.herokuapp.com']
       resource '*', :headers => :any, :methods => :any
     end
     end
