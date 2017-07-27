@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   has_and_belongs_to_many :posts_liked, class_name: 'User', join_table: 'posts_users'
 
   validates :headline, presence: true
+  validates :description, presence: true
+
 
 
   scope :of_friends, -> (friends) {where user_id: friends }
