@@ -40,7 +40,7 @@ class OauthController < ApplicationController
         body: {
           client_id: ENV["INSTAGRAM_CLIENT_ID_MAKE_NEWS"],
           client_secret: ENV["INSTAGRAM_CLIENT_SECRET_MAKE_NEWS"],
-          redirect_uri: 'http://localhost:7000',
+          redirect_uri: 'https://make-news.herokuapp.com/',
           grant_type: 'authorization_code',
           code: params[:code]
         },
@@ -78,7 +78,7 @@ class OauthController < ApplicationController
       query: {
         client_id: ENV["FACEBOOK_APP_ID_MAKE_NEWS"],
         client_secret: ENV["FACEBOOK_APP_SECRET_MAKE_NEWS"],
-        redirect_uri: 'http://localhost:7000/',
+        redirect_uri: 'https://make-news.herokuapp.com/',
         code: params[:code]
       },
       headers: { "Accept" => "application/json"}
